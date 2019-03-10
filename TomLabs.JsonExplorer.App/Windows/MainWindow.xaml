@@ -1,0 +1,14 @@
+﻿<Window
+	x:Class="TomLabs.JsonExplorer.App.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="clr-namespace:TomLabs.JsonExplorer.App"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:views="clr-namespace:TomLabs.JsonExplorer.App.Views"
+	Title="MainWindow"
+	Width="471.761"
+	Height="291.696"
+	mc:Ignorable="d">
+	<views:JsonView DataContext="{Binding JsonViewModel}" />
+</Window>
