@@ -22,7 +22,7 @@ namespace TomLabs.JsonExplorer.App.TemplateSelectors
 				return null;
 
 			var jtWrapper = item as JTWrapper;
-			if (jtWrapper.TokenType == typeof(JProperty))
+			if (jtWrapper.SystemType == typeof(JProperty))
 			{
 				var jProperty = jtWrapper.JToken as JProperty;
 				switch (jProperty.Value.Type)
@@ -38,7 +38,7 @@ namespace TomLabs.JsonExplorer.App.TemplateSelectors
 				}
 			}
 
-			var key = new DataTemplateKey(jtWrapper.TokenType);
+			var key = new DataTemplateKey(jtWrapper.SystemType);
 			return frameworkElement.FindResource(key) as DataTemplate;
 		}
 	}

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TomLabs.JsonExplorer.App.Views
+namespace TomLabs.JsonExplorer.App.Views.Json
 {
 	/// <summary>
-	/// Interaction logic for JsonView.xaml
+	/// Interaction logic for JsonTreeView.xaml
 	/// </summary>
-	public partial class JsonView : UserControl
+	public partial class JsonTreeView : UserControl
 	{
-		public JsonView()
+		public JsonTreeView()
 		{
 			InitializeComponent();
 		}

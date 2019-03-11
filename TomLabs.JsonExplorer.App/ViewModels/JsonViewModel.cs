@@ -22,22 +22,28 @@ namespace TomLabs.JsonExplorer.App.ViewModels
 				var client = new WebClient { Proxy = null };
 				client.DownloadStringCompleted += delegate (object sender, DownloadStringCompletedEventArgs args)
 				{
+					var t = JToken.Parse(args.Result);
+
+					if (t != null)
+					{
+						Json.Add(new JTWrapper(t));
+					}
 				};
 
 				var serilog = "[" + File.ReadAllText(@"C:\Data\WORK\FC\Source\DailyTasks\bin\Debug\log-2019030711.json").Replace($"}}{Environment.NewLine}", $"}},{Environment.NewLine}") + "]";
 
-				var token = JToken.Parse(serilog);
+				//var token = JToken.Parse(serilog);
 
-				if (token != null)
-				{
-					Json.Add(new JTWrapper(token));
-				}
+				//if (token != null)
+				//{
+				//	Json.Add(new JTWrapper(token));
+				//}
 
 				// Choose 1
 				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/posts"));
 				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/comments"));
 				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/albums"));
-				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/photos"));
+				client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/photos"));
 				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/todos"));
 				//client.DownloadStringAsync(new Uri("http://jsonplaceholder.typicode.com/users"));
 			}

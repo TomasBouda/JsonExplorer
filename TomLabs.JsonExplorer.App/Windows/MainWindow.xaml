@@ -5,10 +5,10 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:local="clr-namespace:TomLabs.JsonExplorer.App"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	xmlns:views="clr-namespace:TomLabs.JsonExplorer.App.Views"
-	Title="MainWindow"
+	xmlns:viewsJson="clr-namespace:TomLabs.JsonExplorer.App.Views.Json"
+	Title="JsonExplorer"
 	Width="471.761"
 	Height="291.696"
 	mc:Ignorable="d">
-	<views:JsonView DataContext="{Binding JsonViewModel}" />
+	<viewsJson:JsonView DataContext="{Binding JsonViewModel}" />
 </Window>
