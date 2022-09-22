@@ -13,7 +13,7 @@
 	d:DesignHeight="450"
 	d:DesignWidth="800"
 	mc:Ignorable="d">
-	<Grid>
+	<Grid AllowDrop="True" Drop="Grid_Drop">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="*" />
@@ -22,11 +22,29 @@
 		<ToolBarTray Height="30" DockPanel.Dock="Top">
 			<ToolBar Height="30">
 				<Button
-					Command="{Binding ConnectKeypadCmd}"
+					Command="{Binding OpenSerilogFileCmd}"
 					Cursor="Hand"
-					ToolTip="Serilog">
+					ToolTip="Open Serilog">
 					<StackPanel Orientation="Horizontal">
-						<Image Source="/Resources/Images/serilog.png" />
+						<Image Source="/Resources/Images/file_extension_log.png" />
+						<TextBlock Margin="3,0,0,0" Text="" />
+					</StackPanel>
+				</Button>
+				<Button
+					Command="{Binding ExpandAllCmd}"
+					Cursor="Hand"
+					ToolTip="Expand All">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/Resources/Images/expand.png" />
+						<TextBlock Margin="3,0,0,0" Text="" />
+					</StackPanel>
+				</Button>
+				<Button
+					Command="{Binding CollapseAllCmd}"
+					Cursor="Hand"
+					ToolTip="Collapse All">
+					<StackPanel Orientation="Horizontal">
+						<Image Source="/Resources/Images/collapse.png" />
 						<TextBlock Margin="3,0,0,0" Text="" />
 					</StackPanel>
 				</Button>

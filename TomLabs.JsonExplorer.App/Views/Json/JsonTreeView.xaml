@@ -6,7 +6,7 @@
 	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	xmlns:jlinq="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json"
 	xmlns:json="clr-namespace:TomLabs.JsonExplorer.App.ViewModels.Json"
-	xmlns:local="clr-namespace:TomLabs.JsonExplorer.App.Views"
+	xmlns:local="clr-namespace:TomLabs.JsonExplorer.App.Views.Json"
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:templateSelectors="clr-namespace:TomLabs.JsonExplorer.App.TemplateSelectors"
 	xmlns:valueConverters="clr-namespace:TomLabs.JsonExplorer.App.Converters"

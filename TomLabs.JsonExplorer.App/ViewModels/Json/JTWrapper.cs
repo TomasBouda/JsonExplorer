@@ -50,7 +50,7 @@ namespace TomLabs.JsonExplorer.App.ViewModels.Json
 			JToken = jToken;
 			Parent = parent;
 			Level = level;
-			if (level == 0 && ROOT == null)
+			if (Level == 0 && Parent == null)
 			{
 				ROOT = this;
 			}
